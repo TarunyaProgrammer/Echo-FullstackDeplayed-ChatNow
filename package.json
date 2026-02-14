@@ -1,0 +1,16 @@
+{
+  "name": "echo-root",
+  "version": "1.0.0",
+  "description": "Root package for Echo app",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

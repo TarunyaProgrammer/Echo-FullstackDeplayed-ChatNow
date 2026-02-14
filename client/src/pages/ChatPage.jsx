@@ -80,7 +80,10 @@ function ChatContent() {
           </div>
 
           {/* Search bar */}
-          <div className="flex items-center gap-2.5 bg-dark-800 rounded-xl px-3.5 py-2.5 border border-dark-700/50 focus-within:border-primary-500/50 transition-colors">
+          <div
+            className="flex items-center gap-2.5 bg-dark-800 rounded-xl border border-dark-700/50 focus-within:border-primary-500/50 transition-colors"
+            style={{ padding: "12px 16px" }}
+          >
             <Search size={16} className="text-dark-500" />
             <input
               type="text"

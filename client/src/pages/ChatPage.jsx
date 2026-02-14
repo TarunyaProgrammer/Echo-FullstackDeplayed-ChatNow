@@ -47,8 +47,14 @@ function ChatContent() {
         className={`shrink-0 flex-col bg-dark-900 border-r border-dark-800 w-full md:w-80 ${showSidebar ? "flex" : "hidden"} md:flex`}
       >
         {/* Sidebar header */}
-        <div className="p-5 border-b border-dark-800">
-          <div className="flex items-center justify-between mb-5">
+        <div
+          style={{ padding: "20px 20px 24px" }}
+          className="border-b border-dark-800"
+        >
+          <div
+            className="flex items-center justify-between"
+            style={{ marginBottom: "20px" }}
+          >
             <div className="flex items-center gap-2.5">
               <img
                 src="/echo-logo.png"
@@ -86,7 +92,7 @@ function ChatContent() {
 
         {/* Conversations */}
         <div className="flex-1 overflow-y-auto">
-          <div className="px-4 py-3">
+          <div style={{ padding: "16px 16px 8px" }}>
             <p className="text-xs font-semibold text-dark-500 uppercase tracking-wider">
               Messages
             </p>

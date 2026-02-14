@@ -230,8 +230,7 @@ function ChatContent() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background:
-                "radial-gradient(ellipse at 50% 40%, rgba(239,68,68,0.04) 0%, transparent 60%), #000000",
+              background: "#000000",
             }}
           >
             <motion.div

@@ -131,7 +131,7 @@ function ChatContent() {
 
       <main
         className={`flex-1 flex-col min-w-0 ${!showSidebar ? "flex" : "hidden"} md:flex`}
-        style={{ background: "#0a0a0a", position: "relative" }}
+        style={{ background: "#000000", position: "relative" }}
       >
         {/* 3D animated background */}
         <Suspense fallback={null}>
@@ -147,7 +147,7 @@ function ChatContent() {
               style={{
                 padding: "16px 24px",
                 borderBottom: "1px solid rgba(42, 42, 42, 0.6)",
-                background: "rgba(13, 13, 13, 0.85)",
+                background: "rgba(0, 0, 0, 0.85)",
                 backdropFilter: "blur(12px)",
                 display: "flex",
                 alignItems: "center",
@@ -189,7 +189,7 @@ function ChatContent() {
                     height: "13px",
                     background: "#10b981",
                     borderRadius: "50%",
-                    border: "2px solid #0a0a0a",
+                    border: "2px solid #000000",
                   }}
                 />
               </div>
@@ -231,7 +231,7 @@ function ChatContent() {
               alignItems: "center",
               justifyContent: "center",
               background:
-                "radial-gradient(ellipse at 50% 40%, rgba(239,68,68,0.04) 0%, transparent 60%), #0a0a0a",
+                "radial-gradient(ellipse at 50% 40%, rgba(239,68,68,0.04) 0%, transparent 60%), #000000",
             }}
           >
             <motion.div

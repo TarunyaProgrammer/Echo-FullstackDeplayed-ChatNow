@@ -47,7 +47,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-dvh flex bg-[#050505]">
+    <div className="min-h-dvh flex bg-[#000000]">
       {/* ─── Left Panel · Form ────────────────────── */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}

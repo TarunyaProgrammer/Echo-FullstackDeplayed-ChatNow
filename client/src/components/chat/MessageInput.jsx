@@ -21,7 +21,7 @@ export default function MessageInput() {
       className="px-4 py-3 md:px-6 md:py-4"
       style={{
         borderTop: "1px solid rgba(42, 42, 42, 0.6)",
-        background: "rgba(13, 13, 13, 0.85)",
+        background: "rgba(0, 0, 0, 0.85)",
         backdropFilter: "blur(12px)",
       }}
     >

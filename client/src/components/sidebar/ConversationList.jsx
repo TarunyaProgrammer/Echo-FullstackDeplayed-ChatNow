@@ -34,7 +34,7 @@ export default function ConversationList({ onSelect }) {
   }
 
   return (
-    <div className="px-2 pb-2 space-y-2">
+    <div className="px-2 pb-2">
       {users.map((u, i) => {
         const active = selectedUser?._id === u._id;
         const initials = u.username?.slice(0, 2).toUpperCase();
@@ -47,7 +47,7 @@ export default function ConversationList({ onSelect }) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.04 }}
             onClick={() => handleSelect(u)}
-            className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 cursor-pointer group ${
+            className={`w-full flex items-center gap-3 px-3 py-3.5 mb-3 rounded-xl transition-all duration-200 cursor-pointer group ${
               active
                 ? "bg-primary-600/15 border border-primary-500/20"
                 : "hover:bg-dark-800/70 border border-transparent"

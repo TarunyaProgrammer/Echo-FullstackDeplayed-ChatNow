@@ -357,3 +357,31 @@ body {
   border: 1px solid rgba(239, 68, 68, 0.15);
   animation: ripple-pulse 4s ease-in-out infinite;
 }
+
+/* ─── Fluid marble blob animation ──────────────────── */
+@keyframes fluid-morph {
+  0% {
+    border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 55% 45% 40% 60% / 45% 60% 40% 55%;
+    transform: rotate(3deg) scale(1.02);
+  }
+  50% {
+    border-radius: 45% 55% 60% 40% / 60% 45% 55% 40%;
+    transform: rotate(-2deg) scale(0.98);
+  }
+  75% {
+    border-radius: 60% 40% 45% 55% / 40% 55% 45% 60%;
+    transform: rotate(1deg) scale(1.01);
+  }
+  100% {
+    border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.fluid-blob {
+  animation: fluid-morph 18s ease-in-out infinite;
+}

@@ -277,76 +277,149 @@ export default function AuthPage() {
         </div>
       </motion.div>
 
-      {/* ─── Right Panel · Premium Layered Red Visual ── */}
-      <div className="hidden lg:flex lg:w-[50%] relative overflow-hidden">
-        {/* Base: deep animated gradient */}
-        <div className="absolute inset-0 auth-gradient-bg" />
+      {/* ─── Right Panel · Premium Fluid Red Visual ── */}
+      <div
+        className="hidden lg:flex lg:w-[50%] relative overflow-hidden"
+        style={{ background: "#050000" }}
+      >
+        {/* ── Layer 1: Base deep gradient ── */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(160deg, #000000 0%, #0a0000 20%, #150000 40%, #0a0000 70%, #000000 100%)",
+          }}
+        />
 
-        {/* Layered radial glows for depth */}
+        {/* ── Layer 2: Fluid marble blobs ── */}
+        {/* Large flowing shape — top right */}
+        <div
+          className="absolute fluid-blob"
+          style={{
+            width: "130%",
+            height: "120%",
+            top: "-30%",
+            right: "-40%",
+            background:
+              "linear-gradient(135deg, #7f1d1d 0%, #dc2626 30%, #ef4444 50%, #b91c1c 70%, #450a0a 100%)",
+            borderRadius: "40% 60% 55% 45% / 55% 40% 60% 45%",
+            filter: "blur(1px)",
+            opacity: 0.85,
+            animationDuration: "18s",
+          }}
+        />
+
+        {/* Medium flowing shape — left center */}
+        <div
+          className="absolute fluid-blob"
+          style={{
+            width: "80%",
+            height: "90%",
+            top: "20%",
+            left: "-25%",
+            background:
+              "linear-gradient(200deg, #450a0a 0%, #991b1b 35%, #dc2626 55%, #7f1d1d 80%, #1a0000 100%)",
+            borderRadius: "55% 45% 50% 50% / 45% 55% 45% 55%",
+            filter: "blur(2px)",
+            opacity: 0.7,
+            animationDuration: "22s",
+            animationDelay: "-6s",
+          }}
+        />
+
+        {/* Small flowing shape — bottom right accent */}
+        <div
+          className="absolute fluid-blob"
+          style={{
+            width: "60%",
+            height: "65%",
+            bottom: "-15%",
+            right: "-10%",
+            background:
+              "linear-gradient(300deg, #1a0000 0%, #b91c1c 40%, #ef4444 60%, #991b1b 85%, #2d0000 100%)",
+            borderRadius: "50% 50% 40% 60% / 60% 40% 60% 40%",
+            filter: "blur(1px)",
+            opacity: 0.6,
+            animationDuration: "20s",
+            animationDelay: "-10s",
+          }}
+        />
+
+        {/* Thin flowing highlight streak */}
+        <div
+          className="absolute fluid-blob"
+          style={{
+            width: "45%",
+            height: "110%",
+            top: "-10%",
+            left: "30%",
+            background:
+              "linear-gradient(180deg, transparent 0%, rgba(239,68,68,0.5) 30%, rgba(248,113,113,0.6) 50%, rgba(239,68,68,0.4) 70%, transparent 100%)",
+            borderRadius: "45% 55% 50% 50% / 50% 50% 50% 50%",
+            filter: "blur(30px)",
+            opacity: 0.5,
+            animationDuration: "15s",
+            animationDelay: "-3s",
+          }}
+        />
+
+        {/* ── Layer 3: Depth overlay with radial vignette ── */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 70% 30%, rgba(239,68,68,0.2), transparent 70%), " +
-              "radial-gradient(ellipse 60% 80% at 30% 70%, rgba(185,28,28,0.15), transparent 60%), " +
-              "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(220,38,38,0.08), transparent 50%)",
+              "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, rgba(0,0,0,0.4) 100%)",
           }}
         />
 
-        {/* Floating blurred orbs */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="floating-orb" />
-          <div className="floating-orb" />
-          <div className="floating-orb" />
-        </div>
-
-        {/* Ripple rings — layered concentric circles with red glow */}
-        {[650, 480, 310, 180].map((size, i) => (
-          <div
-            key={size}
-            className="absolute inset-0 flex items-center justify-center pointer-events-none"
-          >
-            <div
-              className="auth-ripple-ring"
-              style={{
-                width: `${size}px`,
-                height: `${size}px`,
-                animationDelay: `${i * 0.8}s`,
-                borderColor: `rgba(239, 68, 68, ${0.06 + i * 0.03})`,
-                boxShadow: `0 0 ${20 + i * 10}px rgba(239, 68, 68, ${0.02 + i * 0.01})`,
-              }}
-            />
-          </div>
-        ))}
-
-        {/* Subtle vertical light streaks */}
+        {/* ── Layer 4: Subtle noise-like dot texture ── */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(239,68,68,0.03) 0%, transparent 30%, transparent 70%, rgba(185,28,28,0.02) 100%)",
+            backgroundImage:
+              "radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)",
+            backgroundSize: "4px 4px",
+            mixBlendMode: "overlay",
           }}
         />
 
-        {/* Center card */}
+        {/* ── Layer 5: Glossy light reflections ── */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: "140%",
+            height: "50%",
+            top: "-10%",
+            left: "-20%",
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 100%)",
+            borderRadius: "0 0 50% 50%",
+            transform: "rotate(-5deg)",
+          }}
+        />
+
+        {/* ── Center content card (glass) ── */}
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-12">
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="backdrop-blur-2xl rounded-3xl p-10 border max-w-[380px] w-full shadow-2xl"
+            className="rounded-3xl p-10 border max-w-[380px] w-full"
             style={{
-              background: "rgba(239, 68, 68, 0.06)",
-              borderColor: "rgba(239, 68, 68, 0.12)",
+              background: "rgba(0, 0, 0, 0.25)",
+              backdropFilter: "blur(40px)",
+              WebkitBackdropFilter: "blur(40px)",
+              borderColor: "rgba(255, 255, 255, 0.08)",
               boxShadow:
-                "0 25px 60px rgba(0,0,0,0.4), 0 0 40px rgba(239,68,68,0.05)",
+                "0 25px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
             }}
           >
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto"
               style={{
-                background: "rgba(239, 68, 68, 0.12)",
-                border: "1px solid rgba(239, 68, 68, 0.15)",
+                background: "rgba(239, 68, 68, 0.15)",
+                border: "1px solid rgba(239, 68, 68, 0.2)",
+                boxShadow: "0 0 30px rgba(239, 68, 68, 0.1)",
               }}
             >
               <MessageCircle size={32} className="text-red-400" />
@@ -354,7 +427,7 @@ export default function AuthPage() {
             <h2 className="text-[26px] font-extrabold text-white text-center mb-3 leading-tight">
               Connect Instantly
             </h2>
-            <p className="text-white/60 text-[14px] text-center leading-relaxed max-w-[280px] mx-auto">
+            <p className="text-white/50 text-[14px] text-center leading-relaxed max-w-[280px] mx-auto">
               Real-time messaging with beautiful design. Chat, share, and stay
               connected with everyone.
             </p>
@@ -364,10 +437,10 @@ export default function AuthPage() {
               {["Real-time", "Encrypted", "Fast"].map((label) => (
                 <span
                   key={label}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white/70 rounded-full px-3.5 py-1.5"
+                  className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white/60 rounded-full px-3.5 py-1.5"
                   style={{
-                    background: "rgba(239, 68, 68, 0.08)",
-                    border: "1px solid rgba(239, 68, 68, 0.12)",
+                    background: "rgba(255, 255, 255, 0.06)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
                   }}
                 >
                   <Sparkles size={10} className="text-red-400" />
@@ -393,7 +466,7 @@ export default function AuthPage() {
               ].map((grad, i) => (
                 <div
                   key={i}
-                  className={`w-8 h-8 rounded-full bg-gradient-to-br ${grad} border-2 border-[#050505] flex items-center justify-center text-[10px] font-bold text-white`}
+                  className={`w-8 h-8 rounded-full bg-gradient-to-br ${grad} border-2 border-black flex items-center justify-center text-[10px] font-bold text-white`}
                 >
                   {["AK", "RS", "PK", "MJ"][i]}
                 </div>
@@ -407,8 +480,8 @@ export default function AuthPage() {
         </div>
 
         {/* Footer */}
-        <div className="absolute bottom-6 left-0 right-0 text-center">
-          <p className="text-white/20 text-[11px]">
+        <div className="absolute bottom-6 left-0 right-0 text-center z-10">
+          <p className="text-white/15 text-[11px]">
             © 2026 Echo. All rights reserved.
           </p>
         </div>

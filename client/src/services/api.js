@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  // baseURL: "http://localhost:8000/api",
+  baseURL: "https://echo-fullstackdeplayed-chatnow.onrender.com/api",
 });
 
 // Attach token to every request

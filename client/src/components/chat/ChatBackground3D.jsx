@@ -63,10 +63,10 @@ function ParticleField({ count = 120 }) {
     const pos = new Float32Array(count * 3);
     const col = new Float32Array(count * 3);
     const palette = [
-      new THREE.Color("#3b82f6"),
-      new THREE.Color("#6366f1"),
-      new THREE.Color("#8b5cf6"),
-      new THREE.Color("#06b6d4"),
+      new THREE.Color("#ef4444"),
+      new THREE.Color("#dc2626"),
+      new THREE.Color("#b91c1c"),
+      new THREE.Color("#f87171"),
     ];
 
     for (let i = 0; i < count; i++) {
@@ -140,39 +140,39 @@ export default function ChatBackground3D() {
         <directionalLight
           position={[5, 5, 5]}
           intensity={0.4}
-          color="#93c5fd"
+          color="#fca5a5"
         />
         <directionalLight
           position={[-3, -3, 2]}
           intensity={0.2}
-          color="#c084fc"
+          color="#f87171"
         />
 
         {/* Floating distorted spheres */}
         <FloatingSphere
           position={[-3.5, 1.5, -2]}
-          color="#3b82f6"
+          color="#ef4444"
           size={1.2}
           speed={0.8}
           distort={0.4}
         />
         <FloatingSphere
           position={[3, -1.5, -3]}
-          color="#8b5cf6"
+          color="#b91c1c"
           size={0.9}
           speed={0.6}
           distort={0.35}
         />
         <FloatingSphere
           position={[0.5, 2.5, -4]}
-          color="#06b6d4"
+          color="#dc2626"
           size={0.7}
           speed={1}
           distort={0.3}
         />
         <FloatingSphere
           position={[-2, -2.5, -2.5]}
-          color="#6366f1"
+          color="#991b1b"
           size={0.6}
           speed={0.7}
           distort={0.45}
@@ -181,12 +181,12 @@ export default function ChatBackground3D() {
         {/* Wireframe torus rings */}
         <WireframeTorus
           position={[2.5, 1.8, -3.5]}
-          color="#3b82f6"
+          color="#ef4444"
           size={1.5}
         />
         <WireframeTorus
           position={[-2.5, -1.5, -4]}
-          color="#8b5cf6"
+          color="#dc2626"
           size={1.2}
         />
 

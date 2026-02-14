@@ -20,8 +20,8 @@ export default function MessageInput() {
       onSubmit={handleSubmit}
       className="px-4 py-3 md:px-6 md:py-4"
       style={{
-        borderTop: "1px solid rgba(30, 41, 59, 0.6)",
-        background: "rgba(15, 23, 42, 0.85)",
+        borderTop: "1px solid rgba(42, 42, 42, 0.6)",
+        background: "rgba(13, 13, 13, 0.85)",
         backdropFilter: "blur(12px)",
       }}
     >
@@ -30,10 +30,10 @@ export default function MessageInput() {
           display: "flex",
           alignItems: "center",
           gap: "12px",
-          background: "rgba(30, 41, 59, 0.6)",
+          background: "rgba(26, 26, 26, 0.6)",
           borderRadius: "16px",
           padding: "8px 16px",
-          border: "1px solid rgba(51, 65, 85, 0.4)",
+          border: "1px solid rgba(42, 42, 42, 0.4)",
           transition: "border-color 0.2s",
         }}
       >
@@ -42,7 +42,7 @@ export default function MessageInput() {
           type="button"
           style={{
             padding: "6px",
-            color: "#64748b",
+            color: "#525252",
             background: "none",
             border: "none",
             borderRadius: "8px",
@@ -66,7 +66,7 @@ export default function MessageInput() {
             outline: "none",
             border: "none",
             fontSize: "14px",
-            color: "#e2e8f0",
+            color: "#d4d4d4",
             padding: "8px 0",
           }}
         />
@@ -97,15 +97,15 @@ export default function MessageInput() {
           style={{
             padding: "10px",
             background: text.trim()
-              ? "linear-gradient(135deg, #3b82f6, #2563eb)"
-              : "rgba(51, 65, 85, 0.5)",
+              ? "linear-gradient(135deg, #ef4444, #dc2626)"
+              : "rgba(42, 42, 42, 0.5)",
             color: "#ffffff",
             border: "none",
             borderRadius: "12px",
             cursor: text.trim() ? "pointer" : "default",
             opacity: text.trim() ? 1 : 0.4,
             boxShadow: text.trim()
-              ? "0 4px 12px rgba(59, 130, 246, 0.3)"
+              ? "0 4px 12px rgba(239, 68, 68, 0.3)"
               : "none",
             display: "flex",
             alignItems: "center",

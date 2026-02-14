@@ -30,7 +30,7 @@ export default function MessageList() {
           zIndex: 1,
         }}
       >
-        <p style={{ color: "#475569", fontSize: "14px" }}>
+        <p style={{ color: "#525252", fontSize: "14px" }}>
           No messages yet — say hello! 👋
         </p>
       </div>
@@ -74,12 +74,12 @@ export default function MessageList() {
                   ? "18px 18px 6px 18px"
                   : "18px 18px 18px 6px",
                 background: mine
-                  ? "linear-gradient(135deg, #3b82f6, #2563eb)"
-                  : "rgba(30, 41, 59, 0.8)",
-                color: mine ? "#ffffff" : "#e2e8f0",
-                border: mine ? "none" : "1px solid rgba(51, 65, 85, 0.5)",
+                  ? "linear-gradient(135deg, #ef4444, #dc2626)"
+                  : "rgba(26, 26, 26, 0.8)",
+                color: mine ? "#ffffff" : "#d4d4d4",
+                border: mine ? "none" : "1px solid rgba(42, 42, 42, 0.5)",
                 boxShadow: mine
-                  ? "0 2px 12px rgba(59, 130, 246, 0.2)"
+                  ? "0 2px 12px rgba(239, 68, 68, 0.2)"
                   : "0 1px 4px rgba(0,0,0,0.15)",
               }}
             >
@@ -99,7 +99,7 @@ export default function MessageList() {
                   fontSize: "10px",
                   margin: "4px 0 0 0",
                   textAlign: "right",
-                  color: mine ? "rgba(255,255,255,0.5)" : "#64748b",
+                  color: mine ? "rgba(255,255,255,0.5)" : "#525252",
                 }}
               >
                 {formatTime(msg.createdAt)}

@@ -3,27 +3,27 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-dark-50: #f8fafc;
-  --color-dark-100: #f1f5f9;
-  --color-dark-200: #e2e8f0;
-  --color-dark-300: #cbd5e1;
-  --color-dark-400: #94a3b8;
-  --color-dark-500: #64748b;
-  --color-dark-600: #475569;
-  --color-dark-700: #334155;
-  --color-dark-800: #1e293b;
-  --color-dark-900: #0f172a;
-  --color-dark-950: #020617;
+  --color-primary-50: #fff1f2;
+  --color-primary-100: #ffe4e6;
+  --color-primary-200: #fecdd3;
+  --color-primary-300: #fda4af;
+  --color-primary-400: #fb7185;
+  --color-primary-500: #ef4444;
+  --color-primary-600: #dc2626;
+  --color-primary-700: #b91c1c;
+  --color-primary-800: #991b1b;
+  --color-primary-900: #7f1d1d;
+  --color-dark-50: #fafafa;
+  --color-dark-100: #f0f0f0;
+  --color-dark-200: #d4d4d4;
+  --color-dark-300: #a3a3a3;
+  --color-dark-400: #737373;
+  --color-dark-500: #525252;
+  --color-dark-600: #404040;
+  --color-dark-700: #2a2a2a;
+  --color-dark-800: #1a1a1a;
+  --color-dark-900: #0d0d0d;
+  --color-dark-950: #050505;
 }
 
 /* ─── Base ─────────────────────────────────────────── */
@@ -109,18 +109,21 @@ body {
   }
 }
 
+/* Premium layered red gradient for auth right panel */
 .auth-gradient-bg {
   background: linear-gradient(
     135deg,
-    #0f172a 0%,
-    #1e3a8a 25%,
-    #2563eb 50%,
-    #3b82f6 65%,
-    #06b6d4 80%,
-    #0f172a 100%
+    #0a0a0a 0%,
+    #1a0505 15%,
+    #2d0a0a 30%,
+    #4a0e0e 50%,
+    #7f1d1d 65%,
+    #991b1b 75%,
+    #1a0505 90%,
+    #0a0a0a 100%
   );
-  background-size: 300% 300%;
-  animation: gradient-shift 8s ease-in-out infinite;
+  background-size: 400% 400%;
+  animation: gradient-shift 12s ease-in-out infinite;
 }
 
 .auth-gradient-bg::before {
@@ -130,12 +133,17 @@ body {
   background:
     radial-gradient(
       ellipse 600px 600px at 80% 20%,
-      rgba(59, 130, 246, 0.3),
+      rgba(239, 68, 68, 0.25),
       transparent
     ),
     radial-gradient(
       ellipse 400px 400px at 20% 80%,
-      rgba(6, 182, 212, 0.2),
+      rgba(220, 38, 38, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 500px 500px at 50% 50%,
+      rgba(185, 28, 28, 0.1),
       transparent
     );
   animation: pulse-glow 4s ease-in-out infinite;
@@ -152,7 +160,7 @@ body {
 .floating-orb:nth-child(1) {
   width: 300px;
   height: 300px;
-  background: rgba(59, 130, 246, 0.4);
+  background: rgba(239, 68, 68, 0.35);
   top: 10%;
   left: 60%;
   animation-delay: 0s;
@@ -161,7 +169,7 @@ body {
 .floating-orb:nth-child(2) {
   width: 200px;
   height: 200px;
-  background: rgba(6, 182, 212, 0.3);
+  background: rgba(220, 38, 38, 0.25);
   top: 50%;
   left: 70%;
   animation-delay: 2s;
@@ -170,7 +178,7 @@ body {
 .floating-orb:nth-child(3) {
   width: 250px;
   height: 250px;
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(185, 28, 28, 0.3);
   top: 70%;
   left: 50%;
   animation-delay: 4s;
@@ -178,7 +186,7 @@ body {
 
 /* ─── Input focus glow ─────────────────────────────── */
 .input-glow:focus-within {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
 }
 
 /* ─── Button shimmer ───────────────────────────────── */
@@ -259,7 +267,7 @@ body {
 /* ─── Chat area background ────────────────────────── */
 .chat-bg {
   position: relative;
-  background: #0b1120;
+  background: #0a0a0a;
 }
 
 .chat-bg::before {
@@ -269,17 +277,17 @@ body {
   background:
     radial-gradient(
       ellipse 500px 500px at 15% 20%,
-      rgba(59, 130, 246, 0.08),
+      rgba(239, 68, 68, 0.06),
       transparent
     ),
     radial-gradient(
       ellipse 400px 400px at 85% 70%,
-      rgba(139, 92, 246, 0.07),
+      rgba(185, 28, 28, 0.05),
       transparent
     ),
     radial-gradient(
       ellipse 350px 350px at 50% 90%,
-      rgba(6, 182, 212, 0.05),
+      rgba(220, 38, 38, 0.04),
       transparent
     );
   pointer-events: none;
@@ -291,7 +299,7 @@ body {
   position: absolute;
   inset: 0;
   background-image: radial-gradient(
-    rgba(148, 163, 184, 0.06) 1px,
+    rgba(115, 115, 115, 0.04) 1px,
     transparent 1px
   );
   background-size: 24px 24px;
@@ -329,4 +337,23 @@ body {
   animation: chat-blob-drift 12s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
+}
+
+/* ─── Auth ripple rings animation ──────────────────── */
+@keyframes ripple-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.08;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.12;
+  }
+}
+
+.auth-ripple-ring {
+  border-radius: 50%;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  animation: ripple-pulse 4s ease-in-out infinite;
 }

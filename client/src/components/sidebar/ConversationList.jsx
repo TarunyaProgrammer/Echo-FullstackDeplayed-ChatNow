@@ -47,7 +47,8 @@ export default function ConversationList({ onSelect }) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.04 }}
             onClick={() => handleSelect(u)}
-            className={`w-full flex items-center gap-3 px-3 py-3.5 mb-3 rounded-xl transition-all duration-200 cursor-pointer group ${
+            style={{ marginBottom: "12px", padding: "14px 12px" }}
+            className={`w-full flex items-center gap-3 rounded-xl transition-all duration-200 cursor-pointer group ${
               active
                 ? "bg-primary-600/15 border border-primary-500/20"
                 : "hover:bg-dark-800/70 border border-transparent"

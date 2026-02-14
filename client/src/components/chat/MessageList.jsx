@@ -26,8 +26,8 @@ export default function MessageList() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background:
-            "radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.06) 0%, transparent 60%), #0b1120",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <p style={{ color: "#475569", fontSize: "14px" }}>
@@ -39,10 +39,12 @@ export default function MessageList() {
 
   return (
     <div
-      className="chat-bg px-4 py-4 md:px-7 md:py-6"
+      className="px-4 py-4 md:px-7 md:py-6"
       style={{
         flex: 1,
         overflowY: "auto",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       {messages.map((msg, i) => {

@@ -34,7 +34,7 @@ export default function ConversationList({ onSelect }) {
   }
 
   return (
-    <div className="px-2 pb-2 space-y-0.5">
+    <div className="px-2 pb-2 space-y-2">
       {users.map((u, i) => {
         const active = selectedUser?._id === u._id;
         const initials = u.username?.slice(0, 2).toUpperCase();

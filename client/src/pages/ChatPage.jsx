@@ -189,7 +189,7 @@ function ChatContent() {
                     height: "13px",
                     background: "#10b981",
                     borderRadius: "50%",
-                    border: "2px solid #0f172a",
+                    border: "2px solid #0a0a0a",
                   }}
                 />
               </div>
@@ -231,7 +231,7 @@ function ChatContent() {
               alignItems: "center",
               justifyContent: "center",
               background:
-                "radial-gradient(ellipse at 50% 40%, rgba(59,130,246,0.06) 0%, transparent 60%), #0b1120",
+                "radial-gradient(ellipse at 50% 40%, rgba(239,68,68,0.04) 0%, transparent 60%), #0a0a0a",
             }}
           >
             <motion.div
@@ -246,20 +246,20 @@ function ChatContent() {
                   margin: "0 auto 24px",
                   borderRadius: "20px",
                   background:
-                    "linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15))",
+                    "linear-gradient(135deg, rgba(239,68,68,0.12), rgba(185,28,28,0.12))",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  border: "1px solid rgba(59,130,246,0.1)",
+                  border: "1px solid rgba(239,68,68,0.1)",
                 }}
               >
-                <MessageCircle size={36} style={{ color: "#60a5fa" }} />
+                <MessageCircle size={36} style={{ color: "#f87171" }} />
               </div>
               <h2
                 style={{
                   fontSize: "20px",
                   fontWeight: 700,
-                  color: "#cbd5e1",
+                  color: "#d4d4d4",
                   margin: "0 0 8px 0",
                 }}
               >
@@ -267,7 +267,7 @@ function ChatContent() {
               </h2>
               <p
                 style={{
-                  color: "#64748b",
+                  color: "#525252",
                   fontSize: "14px",
                   maxWidth: "280px",
                   margin: "0 auto",

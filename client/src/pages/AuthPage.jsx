@@ -403,79 +403,108 @@ export default function AuthPage() {
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="rounded-3xl p-10 border max-w-[380px] w-full"
+            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+            className="rounded-[28px] max-w-[360px] w-full overflow-hidden"
             style={{
-              background: "rgba(0, 0, 0, 0.25)",
-              backdropFilter: "blur(40px)",
-              WebkitBackdropFilter: "blur(40px)",
-              borderColor: "rgba(255, 255, 255, 0.08)",
+              background: "rgba(0, 0, 0, 0.45)",
+              backdropFilter: "blur(60px)",
+              WebkitBackdropFilter: "blur(60px)",
+              border: "1px solid rgba(255, 255, 255, 0.07)",
               boxShadow:
-                "0 25px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
+                "0 32px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)",
             }}
           >
-            <div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto"
-              style={{
-                background: "rgba(239, 68, 68, 0.15)",
-                border: "1px solid rgba(239, 68, 68, 0.2)",
-                boxShadow: "0 0 30px rgba(239, 68, 68, 0.1)",
-              }}
-            >
-              <MessageCircle size={32} className="text-red-400" />
-            </div>
-            <h2 className="text-[26px] font-extrabold text-white text-center mb-3 leading-tight">
-              Connect Instantly
-            </h2>
-            <p className="text-white/50 text-[14px] text-center leading-relaxed max-w-[280px] mx-auto">
-              Real-time messaging with beautiful design. Chat, share, and stay
-              connected with everyone.
-            </p>
-
-            {/* Feature pills */}
-            <div className="flex flex-wrap justify-center gap-2 mt-7">
-              {["Real-time", "Encrypted", "Fast"].map((label) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white/60 rounded-full px-3.5 py-1.5"
+            {/* Card inner content */}
+            <div style={{ padding: "40px 36px 28px" }}>
+              {/* Icon with glow */}
+              <div className="relative w-14 h-14 mx-auto mb-7">
+                <div
+                  className="absolute inset-0 rounded-2xl"
                   style={{
-                    background: "rgba(255, 255, 255, 0.06)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    background: "rgba(239, 68, 68, 0.2)",
+                    filter: "blur(12px)",
+                  }}
+                />
+                <div
+                  className="relative w-14 h-14 rounded-2xl flex items-center justify-center"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(239,68,68,0.25), rgba(185,28,28,0.25))",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
                   }}
                 >
-                  <Sparkles size={10} className="text-red-400" />
+                  <MessageCircle size={26} className="text-red-400" />
+                </div>
+              </div>
+
+              {/* Heading */}
+              <h2 className="text-[24px] font-extrabold text-white text-center mb-2.5 leading-[1.2] tracking-tight">
+                Connect Instantly
+              </h2>
+              <p className="text-white/40 text-[13px] text-center leading-relaxed max-w-[260px] mx-auto">
+                Real-time messaging with beautiful design. Stay connected with
+                everyone.
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div
+              style={{
+                height: "1px",
+                background: "rgba(255,255,255,0.06)",
+                margin: "0 36px",
+              }}
+            />
+
+            {/* Stats row */}
+            <div
+              style={{
+                padding: "20px 36px 24px",
+                display: "flex",
+                justifyContent: "center",
+                gap: "32px",
+              }}
+            >
+              {[
+                { value: "2K+", label: "Users" },
+                { value: "50K+", label: "Messages" },
+                { value: "99.9%", label: "Uptime" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <p className="text-[16px] font-bold text-white/80">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] font-medium text-white/30 uppercase tracking-wider mt-0.5">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Feature tags */}
+            <div
+              style={{
+                padding: "0 36px 28px",
+                display: "flex",
+                justifyContent: "center",
+                gap: "6px",
+              }}
+            >
+              {["End-to-end encrypted", "Lightning fast"].map((label) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center gap-1.5 text-[10px] font-medium text-white/40 rounded-full"
+                  style={{
+                    padding: "6px 12px",
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                  }}
+                >
+                  <Sparkles size={9} className="text-red-400/70" />
                   {label}
                 </span>
               ))}
             </div>
-          </motion.div>
-
-          {/* User count social proof */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-8 flex items-center gap-3"
-          >
-            <div className="flex -space-x-2">
-              {[
-                "from-red-400 to-red-600",
-                "from-rose-400 to-pink-600",
-                "from-orange-400 to-red-600",
-                "from-amber-400 to-orange-600",
-              ].map((grad, i) => (
-                <div
-                  key={i}
-                  className={`w-8 h-8 rounded-full bg-gradient-to-br ${grad} border-2 border-black flex items-center justify-center text-[10px] font-bold text-white`}
-                >
-                  {["AK", "RS", "PK", "MJ"][i]}
-                </div>
-              ))}
-            </div>
-            <p className="text-white/40 text-[12px]">
-              Join <span className="text-white/70 font-semibold">2,000+</span>{" "}
-              users
-            </p>
           </motion.div>
         </div>
 

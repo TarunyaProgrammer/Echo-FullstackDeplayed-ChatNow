@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /register
+
+# Disallow private/protected routes to prevent crawling errors
+Disallow: /chat
+Disallow: /api/
+
+Sitemap: https://echo-chi-two.vercel.app/sitemap.xml
